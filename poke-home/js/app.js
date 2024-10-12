@@ -135,12 +135,10 @@ function toggleAllPokeInBox(boxNumber, check = true) {
   for (let pkmNum = startPkmNum; pkmNum < endPkmNum; pkmNum++) {
     const poke = document.getElementById(`pkm-${ pkmNum + 1 }`)
     if (check) {
-      console.log(`pkm-${ pkmNum + 1 } - checked`)
       poke.classList.add('checked');
       localStorage.setItem((pkmNum + 1).toString().padStart(3, '0'), '0');
       continue;
     }
-    console.log(`pkm-${ pkmNum + 1 } - unchecked`)
     poke.classList.remove('checked');
     localStorage.setItem((pkmNum + 1).toString().padStart(3, '0'), '1');
   }
