@@ -422,7 +422,7 @@ textarea {
   left: -5px;
   right: 0;
   bottom: 0;
-  background-image: url('/img/checked.png');
+  background-image: url('../img/checked.png');
   background-size: 100px;
   overflow: visible;
   background-repeat: no-repeat;
