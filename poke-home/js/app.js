@@ -15,10 +15,10 @@ let genderDexData;
 let gMaxDexData;
 
 async function loadPokeData() {
-  const responseComplete = await fetch("js/pokemon_normal_dex_data.json");
-  const responseFormVariance = await fetch("js/pokemon_form_dex_data.json");
-  const responseGenderVariance = await fetch("js/pokemon_gender_dex_data.json");
-  const responseGMax = await fetch("js/pokemon_g_max_dex_data.json");
+  const responseComplete = await fetch("./js/pokemon_normal_dex_data.json");
+  const responseFormVariance = await fetch("./js/pokemon_form_dex_data.json");
+  const responseGenderVariance = await fetch("./js/pokemon_gender_dex_data.json");
+  const responseGMax = await fetch("./js/pokemon_g_max_dex_data.json");
   normalDexData = await responseComplete.json();
   formDexData = await responseFormVariance.json();
   genderDexData = await responseGenderVariance.json();
