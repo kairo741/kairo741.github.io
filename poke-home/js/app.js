@@ -27,6 +27,7 @@ async function loadPokeData() {
 
 async function init() {
   shinyVersions = (/true/).test(localStorage.getItem('shiny-dex'));
+  document.getElementById("dex-type-sw").checked = shinyVersions;
   loadPokeData().then((json) => {
     // fillBoxes(normalDexData);
     // const modifiedData = genderDexData.map(pokemon => {
@@ -270,7 +271,8 @@ function checkPokeOnStorage(pokeNumber) {
   return localStorage.getItem(pokeNumber) != null && localStorage.getItem(pokeNumber) === "0";
 }
 
-function toggleShinyDex() { // TODO - Rever método de verificação de shiny, talvez salvar a URL no json
+async function toggleShinyDex() { // TODO - Rever método de verificação de shiny, talvez salvar a URL no json
+  await new Promise(resolve => setTimeout(resolve, 500));
   shinyVersions = !shinyVersions;
   localStorage.setItem('shiny-dex', shinyVersions);
   window.location.reload();
