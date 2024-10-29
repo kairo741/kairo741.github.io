@@ -267,6 +267,13 @@ textarea {
   min-width: 550px;
   max-width: 550px;
   min-height: 480px;
+
+  /*&:hover {
+    .box-title-container {
+      background: rgba(247, 172, 31, 255);
+      color: white;
+    }
+  }*/
 }
 
 .box-header {
@@ -288,6 +295,11 @@ textarea {
   width: 320px;
   height: 40px;
   line-height: 40px;
+
+  &:hover {
+    background: rgba(247, 172, 31, 255);
+    color: white;
+  }
 }
 
 .box-content {
@@ -313,8 +325,8 @@ textarea {
   background: radial-gradient(circle, rgba(217, 255, 238, 255) 40%, rgba(173, 216, 230, 0) 70%);
 }
 
-.boxes-container { /*TODO - Fix grid overflow*/
-  width: 99.2%;
+.boxes-container {
+  overflow: hidden !important;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colunas padrão */
@@ -334,12 +346,14 @@ textarea {
 .tooltip {
   text-wrap: nowrap;
   visibility: hidden;
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
   border-radius: 3px;
   height: 40px;
-  width: 200px;
+  min-width: 180px;
+  padding: 0 10px;
   line-height: 40px;
   position: absolute;
   bottom: 100%;
@@ -347,7 +361,6 @@ textarea {
   transform: translateX(-50%);
   z-index: 1;
   transition: visibility 0s, opacity 0.5s ease;
-  opacity: 0;
   margin-bottom: 10px;
   /*border-bottom: 4px double rgba(55,195,76,255);*/
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/external.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/floating-submenu.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="Form Living Dex Organizer Guide">
@@ -165,16 +166,18 @@
 <!--        class="tooltip">Golduck (#055)<span class="green-line"></span><span class="arrow"></span></span></span><span-->
 <!--        class="poke-container"><img id="pkm-56" class="pkm-img"-->
 <!--                                    src="https://www.serebii.net/pokemonhome/pokemon/80/056.png" alt="Mankey"-->
-<!--                                    title="Mankey" width="80" height="80"><span class="tooltip">Mankey (#056)<span-->
-<!--        class="green-line"></span><span class="arrow"></span></span></span><span class="poke-container"><img id="pkm-57"-->
-<!--                                                                                                             class="pkm-img"-->
-<!--                                                                                                             src="https://www.serebii.net/pokemonhome/pokemon/80/057.png"-->
-<!--                                                                                                             alt="Primeape"-->
-<!--                                                                                                             title="Primeape"-->
-<!--                                                                                                             width="80"-->
-<!--                                                                                                             height="80"><span-->
-<!--        class="tooltip">Primeape (#057)<span class="green-line"></span><span class="arrow"></span></span></span><span-->
-<!--        class="poke-container"><img id="pkm-58" class="pkm-img"-->
+<!--                                    title="Mankey" width="80" height="80"><span class="tooltip">Mankey (#056)<span class="green-line"></span><span class="arrow"></span></span></span>-->
+<!--<div  class="poke-container">-->
+<!--  <span id="teste">-->
+<!--    <img id="pkm-57" class="pkm-img" src="https://www.serebii.net/pokemonhome/pokemon/80/057.png"-->
+<!--         alt="Primeape" title="Primeape" width="80" height="80">-->
+<!--  </span>-->
+<!--  <span class="tooltip" id="tooltip">Primeape (#057)-->
+<!--      <span class="green-line"></span>-->
+<!--      <span class="arrow"></span>-->
+<!--  </span>-->
+<!--</div>-->
+<!--        <span class="poke-container"><img id="pkm-58" class="pkm-img"-->
 <!--                                    src="https://www.serebii.net/pokemonhome/pokemon/80/058.png" alt="Growlithe"-->
 <!--                                    title="Growlithe" width="80" height="80"><span class="tooltip">Growlithe (#058)<span-->
 <!--        class="green-line"></span><span class="arrow"></span></span></span><span class="poke-container"><img id="pkm-59"-->
@@ -203,9 +206,26 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
+<div id="floating-menu-button">
+  <button id="menu-button" class="menu-fab" onclick="toggleMenu()">
+    <img src="img/white-pokeball.png" alt="Menu" class="fab-icon menu-tooltip">
+    <span class="tooltip-submenu tooltip-menu menu-tooltip">Menu</span>
+  </button>
+
+  <button id="minifab1" class="submenu-fab one" onclick="openExportModal()">
+    <img src="img/white-pokeball.png" alt="Menu" class="fab-icon menu-tooltip">
+    <span class="tooltip-submenu one-tooltip">Exportar Dados</span>
+  </button>
+
+  <button id="minifab2" class="submenu-fab two" onclick="openImportModal()">
+    <img src="img/white-pokeball.png" alt="Menu" class="fab-icon menu-tooltip">
+    <span class="tooltip-submenu two-tooltip">Importar Dados</span>
+  </button>
+</div>
+
 <!-- Botões para abrir o modal -->
-<button onclick="openExportModal()">Exportar Dados</button>
-<button onclick="openImportModal()">Importar Dados</button>
+<!--<button onclick="openExportModal()">Exportar Dados</button>-->
+<!--<button onclick="openImportModal()">Importar Dados</button>-->
 
 <!-- Modal para exportação -->
 <div id="exportModal" class="modal" style="display:none;">
@@ -291,6 +311,7 @@
 <div id="g-max-boxes-container" class="boxes-container"></div>
 <script src="js/app.js"></script>
 <script src="js/modal-controller.js"></script>
+<script src="js/menus.js"></script>
 </body>
 
 </html>
